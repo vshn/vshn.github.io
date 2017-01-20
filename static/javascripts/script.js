@@ -1,14 +1,15 @@
 (function ($, undefined) {
-	var featured = ['lua-nginx-module', 'stapxx', 'redoctober'],
+	var featured = ['crmngr', 'puppet-in-docker','puppet-gitlab','tikapy'],
 		exclude = ['vshn.github.io'],
 		customRepos = [{
-			name : 'stapxx',
-			html_url : 'http://github.com/agentzh/stapxx',
-			language : 'Perl',
-			description : 'Simple macro language extentions to systemtap'
+			name : 'APPUiO Documentation',
+			html_url : 'https://github.com/appuio/docs',
+			language : 'Other',
+			description : 'Documentation about APPUiO - Swiss Container Platform'
 		}],
 		categories = {
 			'Puppet': {
+        'puppet-keepalived': null
       },
 			'Ruby': {
 			},
@@ -45,12 +46,12 @@
 		$link.append($('<h5 class="repo-lang">').text(repo.language || ''));
 		$link.append($('<p class="repo-desc">').text(repo.description || ''));
 
-		/*if( featured.indexOf(repo.name) > -1 ){
+		if( featured.indexOf(repo.name) > -1 ){
 			$link.addClass('featured'+(++num));
 			$item.prependTo('#repos');
-		}else{*/
+		}else{
 		$item.appendTo($container);
-		//}
+		}
 	}
 
 	function addCategory(cat, repos){
