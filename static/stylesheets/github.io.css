@@ -1824,7 +1824,8 @@ input[type="submit"].btn {
     display: block
 }
 .logo {
-    background: transparent url('../assets/icons-s73b196a6ae_2.png') 0 0 no-repeat;
+    background: url('../assets/vshn.svg');
+    background-size: 240px 60px;
     display: inline-block;
     overflow: hidden;
     text-indent: -9999em;
@@ -1861,76 +1862,12 @@ input[type="submit"].btn {
     top: 0;
     width: 100%
 }
-.cf-proxied,
-.cf-unproxied,
-.cf-unproxiable {
-    background: transparent url('../assets/icons-s73b196a6ae_2.png') no-repeat;
-    cursor: pointer;
-    overflow: hidden;
-    padding: 0;
-    text-indent: 200%;
-    height: 34px;
-    width: 55px;
-    background-position: 0 -188px;
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline
-}
-.cf-unproxied {
-    background-position: 0 -120px
-}
-.cf-unproxiable {
-    background-position: 0 -154px
-}
-@media (-webkit-min-device-pixel-ratio: 1.3),
-(-o-min-device-pixel-ratio: 2.6 / 2),
-(min--moz-device-pixel-ratio: 1.3),
-(min-device-pixel-ratio: 1.3),
-(min-resolution: 1.3dppx) {
-    .logo,
-    .cf-proxied,
-    .cf-unproxied {
-        background-image: url('../assets/icons-s73b196a6ae_2.png')
-    }
-    .logo {
-        background-position: 0 -122px;
-        -webkit-background-size: 100% auto;
-        -moz-background-size: 100% auto;
-        -o-background-size: 100% auto;
-        background-size: 100% auto
-    }
-    .cf-proxied {
-        background-position: 0 -380px;
-        -webkit-background-size: 55px, auto;
-        -moz-background-size: 55px, auto;
-        -o-background-size: 55px, auto;
-        background-size: 55px, auto
-    }
-    .cf-unproxied {
-        background-position: 0 -244px;
-        -webkit-background-size: 55px, auto;
-        -moz-background-size: 55px, auto;
-        -o-background-size: 55px, auto;
-        background-size: 55px, auto
-    }
-    .cf-unproxiable {
-        background-position: 0 -312px;
-        -webkit-background-size: 55px, auto;
-        -moz-background-size: 55px, auto;
-        -o-background-size: 55px, auto;
-        background-size: 55px, auto
-    }
-}
 .header {
-    background-color: #333;
-    border-bottom: 1px solid #1a1a1a;
+    background-color: #fff;
     color: #fff;
     height: 60px;
     margin: 0;
-    padding: 0;
+    padding: 4px 0;
     position: relative;
     top: 0;
     z-index: 1000
@@ -1941,7 +1878,6 @@ input[type="submit"].btn {
 .logo-header {
     display: block;
     margin: 0 auto;
-    background-position: 0 -60px
 }
 .header-navigation {
     display: none;
@@ -1984,15 +1920,6 @@ input[type="submit"].btn {
     top: 50%;
     width: 100%
 }
-@media screen and (-webkit-min-device-pixel-ratio: 1.3),
-(-o-min-device-pixel-ratio: 2.6 / 2),
-(min--moz-device-pixel-ratio: 1.3),
-(min-device-pixel-ratio: 1.3),
-(min-resolution: 1.3dppx) {
-    .logo-header {
-        background-position: sprite-background-position(url('../assets/icons_2x-sc6e92cc69d_2.png'), logo-white)
-    }
-}
 @media screen and (min-width: 49.2em) {
     .mobile-navigation {
         display: none
@@ -2014,9 +1941,6 @@ input[type="submit"].btn {
     }
     .header-main {
         padding: 0.5rem 0
-    }
-    .logo-header {
-        background-position: 0 0
     }
     .header-navigation {
         display: block;
@@ -2081,15 +2005,6 @@ input[type="submit"].btn {
     }
     .header-navigation .sub-menu a:hover {
         color: #fff
-    }
-}
-@media screen and (min-width: 49.2em) and (-webkit-min-device-pixel-ratio: 1.3),
-(-o-min-device-pixel-ratio: 2.6 / 2),
-(min--moz-device-pixel-ratio: 1.3),
-(min-device-pixel-ratio: 1.3),
-(min-resolution: 1.3dppx) {
-    .logo-header {
-        background-position: sprite-background-position(url('../assets/icons_2x-sc6e92cc69d_2.png'), logo-black)
     }
 }
 @media screen and (min-width: 66em) {
