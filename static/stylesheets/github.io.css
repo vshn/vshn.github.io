@@ -333,7 +333,7 @@ ul.inline li {
     margin: 0
 }
 a {
-    color: #2f7bbf;
+    color: white;
     outline: none;
     text-decoration: none;
     -webkit-transition: all 0.15s ease;
@@ -342,7 +342,7 @@ a {
     transition: all 0.15s ease
 }
 a:hover {
-    color: #f68b1f
+    color: #2484C6
 }
 a:focus {
     color: #62a1d8;
@@ -477,7 +477,7 @@ blockquote cite:before {
     color: #9bca3e
 }
 .text-warning {
-    color: #f68b1f
+    color: #2484C6
 }
 .text-nonessential {
     color: #888
@@ -1307,14 +1307,14 @@ input[type="submit"] .caret {
 }
 .btn-warning,
 .btn-warning-alt {
-    background-color: #f68b1f;
+    background-color: #2484C6;
     border-color: transparent;
     color: #fff
 }
 .btn-warning:hover,
 .btn-warning-alt:hover {
     background-color: #f9b169;
-    border-color: #f68b1f;
+    border-color: #2484C6;
     color: #fff
 }
 .btn-warning.active,
@@ -1329,8 +1329,8 @@ input[type="submit"] .caret {
 }
 .btn-warning-alt {
     background-color: transparent;
-    border-color: #f68b1f;
-    color: #f68b1f
+    border-color: #2484C6;
+    color: #2484C6
 }
 .btn-link {
     background-color: transparent;
@@ -1927,7 +1927,7 @@ input[type="submit"].btn {
     .header {
         background-color: #fff;
         border-bottom: 0;
-        border-top: 3px solid #f68b1f;
+        border-top: 3px solid #2484C6;
         color: #333;
         height: auto;
         margin-bottom: 2.66667rem
@@ -2248,7 +2248,7 @@ hr.double,
     display: block
 }
 .hero-block {
-    background: #ebebeb url('../assets/hero-bg-clouds.png?1377796349') repeat-x bottom center;
+    background: #2484C6 url('../assets/hero-bg-clouds.png?1377796349') repeat-x bottom center;
     padding: 2.66667em 2em
 }
 .hero-block h1 {
@@ -2295,7 +2295,7 @@ hr.double,
     border-color: #bada7a
 }
 .repo.lang-go {
-    border-color: #f68b1f
+    border-color: #2484C6
 }
 .repo.lang-viml {
     border-color: #f9b169
