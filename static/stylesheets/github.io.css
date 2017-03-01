@@ -333,7 +333,7 @@ ul.inline li {
     margin: 0
 }
 a {
-    color: white;
+    color: #2f7bbf;
     outline: none;
     text-decoration: none;
     -webkit-transition: all 0.15s ease;
@@ -342,7 +342,7 @@ a {
     transition: all 0.15s ease
 }
 a:hover {
-    color: #2484C6
+    color: #185781
 }
 a:focus {
     color: #62a1d8;
@@ -351,6 +351,9 @@ a:focus {
 a:active {
     color: #c16508;
     outline: none
+}
+a.category-shortcuts {
+    color: white;
 }
 h1,
 h2,

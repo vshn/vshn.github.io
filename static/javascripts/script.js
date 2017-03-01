@@ -1,24 +1,40 @@
 (function ($, undefined) {
-	var featured = ['crmngr', 'puppet-in-docker','puppet-gitlab','tikapy'],
+	var featured = [],
 		exclude = ['vshn.github.io'],
 		customRepos = [{
 			name : 'APPUiO Documentation',
 			html_url : 'https://github.com/appuio/docs',
-			language : 'Other',
+			language : 'OpenShift',
 			description : 'Documentation about APPUiO - Swiss Container Platform'
 		}],
 		categories = {
-			'Puppet': {
-        'puppet-keepalived': null
+			'Puppet Modules': {
+        'puppet-gitlab': null,
+        'puppet-identity': null,
+        'puppet-burp': null,
+        'puppet-prosody': null,
+        'uhosting': null
       },
-			'Ruby': {
+			'Puppet Tools': {
+        'crmngr': null,
+        'crmngr-debian': null,
+        'docker-puppetci': null
 			},
-			'Python': {
+			'OpenShift': {
+      },
+			'Docker': {
+        'puppet-in-docker': null
 			},
-			'Shell': {
+			'Monitoring': {
+        'tikapy': null,
+        'tikapy-icinga': null,
+        'tikapy-debian': null,
+        'icingaweb2-module-grafana': null,
+        'icingaweb2-module-grafana-debian': null,
+        'simple_icinga_plugin': null,
+        'pagerduty-icinga-debian': null,
+        'pyrabbit-debian': null
 			},
-			'Other': {
-      }
 		},
 		num = 0;
 
@@ -30,7 +46,7 @@
 		var $time = $('<a>').attr('href', repo.html_url + '/commits').text( repo.pushed_at.toDateString() );
 		$item.append($('<span>').addClass('time').append($time));
 		$item.append('<span class="bullet">&sdot;</span>');
-		var $watchers = $('<a>').attr('href', repo.html_url + '/watchers').text(repo.watchers + (repo.watchers === 1 ? ' stargazer' : ' stargazers'));
+		var $watchers = $('<a>').attr('href', repo.html_url + '/watchers').text(repo.watchers + (repo.watchers === 1 ? ' watcher' : ' watchers'));
 		$item.append($('<span>').addClass('watchers').append($watchers));
 		$item.append('<span class="bullet">&sdot;</span>');
 		var $forks = $('<a>').attr('href', repo.html_url + '/network').text(repo.forks + (repo.forks === 1 ? ' fork' : ' forks'));
@@ -61,7 +77,8 @@
 
 		$('#category-shortcuts').append($('<a />', {
 			href: '#cat-'+cat,
-			text: cat
+			text: cat,
+      class: 'category-shortcuts'
 		}))
 
 		$.each(repos, function(i, repo){
@@ -74,7 +91,7 @@
 	function addRepos(repos, page) {
 		repos = repos || [];
 		page = page || 1;
-		var uri = 'https://api.github.com/orgs/vshn/repos?callback=?' + '&per_page=100' + '&page='+page;
+		var uri = 'https://api.github.com/orgs/vshn/repos?callback=?' + '&per_page=100&type=source' + '&page='+page;
 
 		$.getJSON(uri, function (result) {
 			// API Rate limiting catch
@@ -101,7 +118,7 @@
 								found = true;
 								items[value.name] = value;
 								return false;
-							}else if( value.language == key || (key === 'Nginx and Lua' && value.language === 'Lua') ){
+							}else if( value.language == key ){
 								found = true;
 								categories[key][value.name] = value;
 							}
